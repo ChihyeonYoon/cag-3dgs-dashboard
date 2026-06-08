@@ -866,22 +866,22 @@
       <h3 class="nav-title">연구 자료 목록</h3>
       <ul class="nav-menu">
         <li class="nav-item active" onclick="loadDoc('overview.md', this)">
-          🏠 전체 연구 개요 (Overview)
+          전체 연구 개요 (Overview)
         </li>
         <li class="nav-item" onclick="loadDoc('exploratory_phase_report.md', this)">
-          📑 초기 탐색 단계 보고서
+          초기 탐색 단계 보고서
         </li>
         <li class="nav-item" onclick="loadDoc('main_phase_report.md', this)">
-          🚀 메인 단계 보고서
+          메인 단계 보고서
         </li>
         <li class="nav-item" onclick="loadDoc('walkthrough.md', this)">
-          📝 1차 결과 워크스루
+          1차 결과 워크스루
         </li>
         <li class="nav-item" onclick="loadDoc('walkthrough2.md', this)">
-          🔬 2차 결과 워크스루
+          2차 결과 워크스루
         </li>
         <li class="nav-item" onclick="loadDoc('overall_roadmap.md', this)">
-          🗺️ 전체 연구 로드맵
+          전체 연구 로드맵
         </li>
       </ul>
     </nav>
@@ -895,7 +895,7 @@
         <p id="doc-filename">File: exploratory_phase_report.md</p>
       </div>
       <div class="controls">
-        <button class="btn" onclick="toggleTheme()">🌓 테마 전환</button>
+        <button class="btn" onclick="toggleTheme()">테마 전환</button>
       </div>
     </div>
     
@@ -1048,7 +1048,7 @@
     function showCORSWarning(filename) {
       document.getElementById('content').innerHTML = `
         <div class="error-overlay">
-          <h3>⚠️ 로컬 마크다운 파일 로드 불가 (CORS 정책 제한)</h3>
+          <h3>로컬 마크다운 파일 로드 불가 (CORS 정책 제한)</h3>
           <p>브라우저 보안 규칙(CORS)으로 인해, 마크다운 파일을 로컬 파일 방식(<code>file:///...</code>)으로 직접 로드할 수 없습니다.</p>
           <p>이 웹페이지가 마크다운 문서를 동적으로 렌더링하도록 하려면 아래 안내에 따라 <strong>로컬 웹 서버</strong>를 실행해 주세요.</p>
           
@@ -1159,11 +1159,11 @@ python3 serve.py
             bq.className = `alert-${type.toLowerCase()}`;
             
             let title = type;
-            if (type === 'NOTE') title = '📝 Note';
-            else if (type === 'WARNING') title = '⚠️ Warning';
-            else if (type === 'IMPORTANT') title = '💡 Important';
-            else if (type === 'TIP') title = '💡 Tip';
-            else if (type === 'CAUTION') title = '🔥 Caution';
+            if (type === 'NOTE') title = 'Note';
+            else if (type === 'WARNING') title = 'Warning';
+            else if (type === 'IMPORTANT') title = 'Important';
+            else if (type === 'TIP') title = 'Tip';
+            else if (type === 'CAUTION') title = 'Caution';
             
             const titleDiv = document.createElement('div');
             titleDiv.className = 'alert-title';
