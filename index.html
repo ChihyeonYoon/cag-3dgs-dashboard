@@ -874,15 +874,6 @@
         <li class="nav-item" onclick="loadDoc('main_phase_report.md', this)">
           메인 단계 보고서
         </li>
-        <li class="nav-item" onclick="loadDoc('walkthrough.md', this)">
-          1차 결과 워크스루
-        </li>
-        <li class="nav-item" onclick="loadDoc('walkthrough2.md', this)">
-          2차 결과 워크스루
-        </li>
-        <li class="nav-item" onclick="loadDoc('overall_roadmap.md', this)">
-          전체 연구 로드맵
-        </li>
       </ul>
     </nav>
   </aside>
@@ -1015,10 +1006,7 @@
       const friendlyTitles = {
         'overview.md': '연구 개요 및 요약 (Overview)',
         'exploratory_phase_report.md': '초기 탐색 단계 보고서',
-        'main_phase_report.md': '메인 단계 보고서',
-        'walkthrough.md': '1차 결과 워크스루',
-        'walkthrough2.md': '2차 결과 워크스루',
-        'overall_roadmap.md': '전체 연구 로드맵'
+        'main_phase_report.md': '메인 단계 보고서'
       };
       document.getElementById('doc-title').innerText = friendlyTitles[filename] || filename;
       document.getElementById('doc-filename').innerText = `File: ${filename}`;
