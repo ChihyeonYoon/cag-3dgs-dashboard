@@ -961,7 +961,10 @@
 
     // Custom Parser to handle custom syntax (carousels, path conversion)
     function preprocessMarkdown(markdown) {
-      // 1. Process custom carousel syntax
+      // 1. Preprocess markdown bold syntax that fails to parse due to CJK character boundaries
+      markdown = markdown.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+      // 2. Process custom carousel syntax
       const carouselRegex = /```carousel([\s\S]*?)```/g;
       markdown = markdown.replace(carouselRegex, function(match, content) {
         const slides = content.trim().split(/<!-- slide -->/);
