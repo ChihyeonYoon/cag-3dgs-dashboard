@@ -992,6 +992,10 @@
       // 2. Convert absolute paths to relative paths so images load correctly from local server
       markdown = markdown.replaceAll('/Users/home/.gemini/antigravity/brain/af8691ec-7f2d-4229-a6a4-e8f4635b5bd9/', './');
 
+      // 3. Append cache buster to relative images to prevent browser caching
+      markdown = markdown.replace(/!\[(.*?)\]\(((?!\s*http)[^)]+)\)/g, '![$1]($2?t=' + Date.now() + ')');
+      markdown = markdown.replace(/<img\s+src="((?!\s*http)[^"]+)"/g, '<img src="$1?t=' + Date.now() + '"');
+
       return markdown;
     }
 
